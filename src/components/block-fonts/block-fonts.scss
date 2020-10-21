@@ -1,0 +1,62 @@
+.block-fonts {
+  display: flex;
+}
+
+.block-fonts__name {
+  margin: 0 5% 0 0;
+  width: 11%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block-fonts__text {
+  width:55%;
+  margin-bottom: 52px;
+}
+
+.block-fonts__h1-name {
+  @extend %h1;
+  font-family: montserrat-regular;
+  opacity: 0.25;
+}
+
+.block-fonts__h1-text {
+  @extend %h1;
+  line-height: 30px;
+}
+
+.block-fonts__h2-name {
+  @extend %h2;
+  font-family: montserrat-regular;
+  opacity: 0.25;
+}
+
+.block-fonts__h2-text {
+  @extend %h2;
+  line-height: 23.8px;
+}
+
+.block-fonts__h3-name {
+  @extend %h3;
+  font-family: montserrat-regular;
+  opacity: 0.25;
+}
+
+.block-fonts__h3-text {
+  @extend %h3;
+  line-height: 14.6px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.block-fonts__body-name {
+  @extend %body;
+  opacity: 0.25;
+}
+
+.block-fonts__body-text {
+  @extend %body;
+  opacity: 0.75;
+  width: 50%;
+  line-height: 23px;
+}

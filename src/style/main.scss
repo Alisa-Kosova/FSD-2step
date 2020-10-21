@@ -1,0 +1,49 @@
+@font-face {
+  font-family: quicksand-bold;
+  src: url(@files/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+  font-family: quicksand-regular;
+  src: url(@files/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: montserrat-bold;
+  src: url(@files/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: montserrat-regular;
+  src: url(@files/fonts/Montserrat-Regular.ttf);
+}
+
+//variables
+$background-color: #E5E5E5;
+$color-dark: #1F2041;
+$primary-color: #BC9CFF;
+$white-color: #FFFFFF;
+
+%h1 {
+  font-family: quicksand-bold;
+  font-size: 24px;
+  color: $color-dark;
+}
+
+%h2 {
+  font-family: quicksand-bold;
+  font-size: 19px;
+  color: $color-dark;
+}
+
+%h3 {
+  font-family: montserrat-bold;
+  font-size: 12px;
+  color: $color-dark;
+}
+
+%body {
+  font-family: montserrat-regular;
+  font-size: 14px;
+  color: $color-dark;
+}

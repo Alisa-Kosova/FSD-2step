@@ -1,0 +1,20 @@
+mixin block-colors (fill, opacity, name)
+  div(class="block-colors")
+    svg(class="block-colors__color" width="70", height="70", viewBox="0 0 70 70", fill="none")
+      rect(width="70" height="70" rx="6" fill=fill fill-opacity=opacity)
+    - var opacityText = opacity ? (" " + opacity*100 + "%") : ""
+    div(class="block-colors__color-name")
+      span(class="block-colors__name") #{name + opacityText}
+      span(class="block-colors__code") #{fill}
+-
+  var colors = [
+    {fill: "#1F2041", opacity: "1", name: "Dark Shade"},
+    {fill: "#1F2041", opacity: "0.75", name: "Dark Shade"},
+    {fill: "#1F2041", opacity: "0.5", name: "Dark Shade"},
+    {fill: "#1F2041", opacity: "0.25", name: "Dark Shade"},
+    {fill: "#1F2041", opacity: "0.05", name: "Dark Shade"},
+    {fill: "#BC9CFF", opacity: "", name: "Purple"},
+    {fill: "#6FCF97", opacity: "", name: "Green"}
+  ]
+each color in colors 
+  +block-colors (color.fill, color.opacity, color.name)

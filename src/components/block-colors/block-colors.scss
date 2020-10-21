@@ -1,0 +1,28 @@
+.block-colors {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.block-colors__color {
+  margin-right: 40px;
+}
+
+.block-colors__color-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.block-colors__name {
+  font-family: quicksand-bold;
+  font-size: 19px;
+  color: $color-dark;
+  line-height: 150%;
+}
+
+.block-colors__code {
+  font-family: quicksand-regular;
+  font-size: 19px;
+  color: $color-dark;
+  line-height: 150%;
+}

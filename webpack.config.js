@@ -51,6 +51,7 @@ const multipleHtmlPlugins = HTMLFiles.map(pages => {
 
 module.exports = {
   entry: {
+    colorstype: '@pages/UI-kit/colors-type/colors-type.js',
     normalize: './src/style/main-normalize.js',
   },
   output: {
@@ -62,6 +63,7 @@ module.exports = {
       '@files': path.resolve(__dirname, 'src/files'),
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@components': path.resolve(__dirname, 'src/components'),
+      '@style': path.resolve(__dirname, 'src/style'),
     }
   },
   mode: 'development',

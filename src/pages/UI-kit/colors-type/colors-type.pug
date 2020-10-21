@@ -1,0 +1,14 @@
+extends ../../template-pages/teplate-main.pug
+
+block title
+  | UI kit
+
+block content
+  div(class="colors-type")
+    div(class="colors-type__logo")
+      include ../../../components/logo/logo.pug
+    div(class="content")
+      div(class="colors-type__block-colors")
+        include ../../../components/block-colors/block-colors.pug
+      div(class="colors-type__block-fonts")
+        include ../../../components/block-fonts/block-fonts.pug
