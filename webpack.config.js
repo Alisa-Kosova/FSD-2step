@@ -36,7 +36,8 @@ const optimization = () => {
   return config;
 }
 
-const HTMLFiles = ['src/pages/UI-kit/colors-type/colors-type.pug']
+const HTMLFiles = ['src/pages/UI-kit/colors-type/colors-type.pug',
+                   'src/pages/UI-kit/headers-footers/headers-footers.pug']
 
 const multipleHtmlPlugins = HTMLFiles.map(pages => {
   newFileName = path.basename(pages, '.pug');
@@ -52,6 +53,7 @@ const multipleHtmlPlugins = HTMLFiles.map(pages => {
 module.exports = {
   entry: {
     colorstype: '@pages/UI-kit/colors-type/colors-type.js',
+    headersFooters: '@pages/UI-kit/headers-footers/headers-footers.js',
     normalize: './src/style/main-normalize.js',
   },
   output: {

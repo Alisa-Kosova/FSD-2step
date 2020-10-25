@@ -1,0 +1,25 @@
+.input {
+  width: 260px;
+  height: 44px;
+  border: 1px rgba(31, 32, 65, 0.25) solid;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+}
+
+.input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  @extend %body;
+  opacity: 0.25; 
+  padding-left: 12px;
+}
+
+.input__arrow-forward {
+  position: absolute;
+  display: inline;
+  margin: 10px 0px 0 -33px;
+  color: $color-pink;
+}

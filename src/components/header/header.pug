@@ -1,0 +1,15 @@
+header(class="header")
+  div(class="header__logo")
+    include ../logo-name/logo-name.pug
+  div(class="header__navbar-button")
+    div(class="header__navbar")
+      include ../navbar/navbar.pug
+    include ../light-button/light-button.pug
+    div(class="header__buttons")
+      div(class="header__button")
+        +light-button("Войти")
+      include ../color-button/color-button.pug
+      div(class="header__button")
+        +color-button("Зарегистрироваться")
+    div(class="header__user") 
+      include ../user/user.pug

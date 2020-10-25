@@ -1,0 +1,31 @@
+mixin addText(text)
+    a(class="footer__item" href="#") #{text}
+
+footer(class="footer")
+  div(class="footer__logo-advertising")
+    div(class="footer__logo")
+      include ../logo-name/logo-name.pug
+    div(class="footer__advertising") Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+  div(class="footer__block-menu")
+    div(class="footer__item-title") навигация
+    +addText("О нас")
+    +addText("Новости")
+    +addText("Служба поддержки")
+    +addText("Услуги")
+  div(class="footer__block-menu")
+    div(class="footer__item-title") о нас
+    +addText("О сервисе")
+    +addText("Наша команда")
+    +addText("Вакансии")
+    +addText("Инвесторы")
+  div(class="footer__block-menu")
+    div(class="footer__item-title") Служба поддержки
+    +addText("Соглашения")
+    +addText("Сообщества")
+    +addText("Связь с нами")
+  div(class="footer__subscription")
+    div(class="footer__item-title") Подписка
+    div(class="footer__advertising footer__subscription-text") Получайте специальные предложения и новости сервиса
+    include ../input/input.pug
+    +createInput("email", "Email") 
+include ../copyright-bar/copyright-bar.pug

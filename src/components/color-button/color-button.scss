@@ -1,0 +1,15 @@
+.color-button {
+  width: 194px;
+  height: 34px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, $color-pink 0%, $color-blue 100%);
+  @extend %h3;
+  color: $white-color;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.color-button:focus {
+  outline: none;
+}

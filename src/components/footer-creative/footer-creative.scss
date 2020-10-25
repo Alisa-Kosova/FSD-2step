@@ -1,0 +1,24 @@
+@import '@components/copyright-bar/copyright-bar.scss';
+
+.footer-creative {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $white-color;
+  width: 53%;
+  margin: 0 auto 140px auto;
+  @extend %shadow;
+  padding: 8.4% 0;
+}
+
+.footer-creative__logo {
+  margin-bottom: 16px;
+}
+
+.footer-creative__text {
+  @extend %body;
+  opacity: 0.75;
+  margin: 0 5px 25px 5px;
+  text-align: center;
+}

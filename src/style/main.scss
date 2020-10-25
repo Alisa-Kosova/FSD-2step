@@ -1,3 +1,7 @@
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+@import "../scss/brands.scss";
+
 @font-face {
   font-family: quicksand-bold;
   src: url(@files/fonts/Quicksand-Bold.ttf);
@@ -20,30 +24,41 @@
 
 //variables
 $background-color: #E5E5E5;
-$color-dark: #1F2041;
-$primary-color: #BC9CFF;
+$color-text: #1F2041;
+$color-pink: #BC9CFF;
+$color-blue: #8BA4F9;
 $white-color: #FFFFFF;
 
 %h1 {
   font-family: quicksand-bold;
   font-size: 24px;
-  color: $color-dark;
+  color: $color-text;
 }
 
 %h2 {
   font-family: quicksand-bold;
   font-size: 19px;
-  color: $color-dark;
+  color: $color-text;
 }
 
 %h3 {
   font-family: montserrat-bold;
   font-size: 12px;
-  color: $color-dark;
+  color: $color-text;
 }
 
 %body {
   font-family: montserrat-regular;
   font-size: 14px;
-  color: $color-dark;
+  color: $color-text;
+}
+
+%shadow {
+  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+}
+
+%link{
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-text;
 }

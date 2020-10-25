@@ -1,0 +1,28 @@
+.navbar {
+  @extend %body;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item {
+  opacity: 0.5;
+  margin-left: 20px;
+  background: none;
+  @extend %link;
+}
+
+.navbar__item_active {
+  @extend %h3;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.select-services {
+  border: none;
+  @extend %link;
+}
+
+.select-agreements {
+  border: none;
+  @extend %link;
+}

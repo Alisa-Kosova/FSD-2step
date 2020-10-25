@@ -1,0 +1,67 @@
+@import '@components/input/input.scss';
+@import '@components/copyright-bar/copyright-bar.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: $white-color;
+  padding: 7% 9.7%;
+  border-bottom: 1px solid $background-color;
+}
+
+.footer__logo {
+  max-width: 260px;
+  @extend %body;
+  margin-bottom: 13px;
+}
+
+.footer__item {
+  @extend %body;
+  @extend %link;
+  max-width: 260px;
+  opacity: 0.5;
+  line-height: 13px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__item-title {
+  @extend %h3;
+  text-transform: uppercase;
+}
+
+.footer__advertising {
+  @extend %body;
+  max-width: 260px;
+  opacity: 0.75;
+  line-height: 24px;
+}
+
+.footer__block-menu {
+  width: 160px;
+  @media (max-width: 1920px) {
+    margin: 5px 0 0 0;
+  }
+  @media (max-width: 1100px) {
+    margin: 5px 10px 25px 0;
+  }
+}
+
+.footer__subscription {
+  margin-top: 4px;
+}
+
+.footer__subscription-text {
+  margin: 20px 0 22px 0;
+}
+
+.footer__logo-advertising {
+  @media (max-width: 1920px) {
+    margin: 0px;
+  }
+  @media (max-width: 1100px) {
+    margin: 10px 0 25px 0 ;
+  }
+}

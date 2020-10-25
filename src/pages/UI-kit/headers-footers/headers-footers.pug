@@ -1,0 +1,19 @@
+extends ../../template-pages/teplate-main.pug
+
+block variables
+  - var body__background = true;
+
+block title
+  | UI kit
+
+block content
+  div(class="headers-footers")
+    div(class="headers-footers__logo")
+      include ../../../components/logo/logo.pug
+    div(class="headers-footers__header-with-button")
+      include ../../../components/header/header.pug
+    div(class="headers-footers__header-with-user")
+      include ../../../components/header/header.pug
+
+    include ../../../components/footer-widgets/footer-widgets.pug
+    include ../../../components/footer-creative/footer-creative.pug

@@ -1,0 +1,26 @@
+@mixin createIcon($icon) {
+  @extend %fa-icon;
+  @extend .fab;
+  text-decoration: none;
+  
+  &:before {
+    content: fa-content($icon);
+    background: linear-gradient(180deg, $color-pink 0%, $color-blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 24px;
+  }
+}
+
+.twitter {
+  @include createIcon($fa-var-twitter);
+}
+
+.facebook {
+  @include createIcon($fa-var-facebook);
+  margin: 0 20px;
+}
+
+.instagram {
+  @include createIcon($fa-var-instagram);
+}

@@ -1,0 +1,74 @@
+@import '@components/navbar/navbar.scss';
+@import '@components/light-button/light-button.scss';
+@import '@components/color-button/color-button.scss';
+@import '@components/user/user.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white-color;
+  height: 70px;
+  @extend %shadow;
+}
+
+.header__logo {
+  @media (max-width: 1920px) {
+    margin-left: 9.7%;
+  }
+  @media (max-width: 500px) {
+    margin-left: 2%;
+  }
+}
+
+.header__navbar-button {
+  display: flex;
+  align-items: center;
+  margin: 0 9.8% 4px 5px;
+  @media (max-width: 1920px) {
+    flex-direction: row;
+  }  
+  @media (max-width: 1150px) {
+    flex-direction: column;
+  }
+}
+
+.header__navbar {
+  @media (max-width: 1920px) {
+    margin: 0 5px 0 0;
+  }  
+  @media (max-width: 1150px) {
+    margin: 5px;
+  }
+  @media (max-width: 730px) {
+    display: none;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  @media (max-width: 1150px) {
+    flex-direction: row;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin-top: 3px;
+  }
+}
+
+.header__button {
+  @media (max-width: 1920px) {
+    margin-left: 21px;
+  }
+  @media (max-width: 500px) {
+    margin-left: 2%;
+  }
+}
+
+.header__user_show {
+  display: none;
+}
+
+.header__button_show {
+  display: none;
+}

@@ -1,0 +1,15 @@
+.light-button {
+  width: 87px;
+  height: 34px;
+  border: 2px solid $color-pink;
+  border-radius: 22px;
+  background-color: $white-color;
+  @extend %h3;
+  color: $color-pink;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.light-button:focus {
+  outline: none;
+}
