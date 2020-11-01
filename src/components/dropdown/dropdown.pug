@@ -1,0 +1,17 @@
+mixin createDropdown(list, typeList, nameButton, blockButtons)
+  div(class="dropdown")
+    div(class="dropdown__type") #{typeList}
+    button(class="dropdown__button") #{nameButton}
+      div(class="dropdown__checkmark")
+    div(class="dropdown__list dropdown__list_hidden")
+      each item in list 
+        div(class="dropdown__list-item") 
+          div(class="dropdown__list-item-text") #{item}
+          div(class="dropdown__block-consider")
+            div(class="dropdown__decrease")
+            div(class="dropdown__amount") 0
+            div(class="dropdown__increase")
+      if blockButtons
+        div(class="dropdown__block-buttons")
+          div(class="dropdown__button-clear dropdown__button-clear_hidden") очистить
+          div(class="dropdown__button-use") применить

@@ -1,4 +1,5 @@
 const path = require('path');
+var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -37,13 +38,15 @@ const optimization = () => {
 }
 
 const HTMLFiles = ['src/pages/UI-kit/colors-type/colors-type.pug',
-                   'src/pages/UI-kit/headers-footers/headers-footers.pug']
+                   'src/pages/UI-kit/headers-footers/headers-footers.pug',
+                   'src/pages/UI-kit/form-elements/form-elements.pug']
 
 const multipleHtmlPlugins = HTMLFiles.map(pages => {
   newFileName = path.basename(pages, '.pug');
   return new HtmlWebpackPlugin({
     template: pages,
     filename: `${newFileName}.html`,
+    chunks: ['normalize'],
     minify: {
       collapseWhitespace: isProd
     }
@@ -54,6 +57,7 @@ module.exports = {
   entry: {
     colorstype: '@pages/UI-kit/colors-type/colors-type.js',
     headersFooters: '@pages/UI-kit/headers-footers/headers-footers.js',
+    formElements: '@pages/UI-kit/form-elements/form-elements.js',
     normalize: './src/style/main-normalize.js',
   },
   output: {
@@ -79,6 +83,10 @@ module.exports = {
         { from: path.resolve(__dirname, 'src/files/images'), to: path.resolve(__dirname, 'dist/images') },
       ]
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    })
   ].concat(multipleHtmlPlugins),
   optimization: optimization(),
   devServer: {

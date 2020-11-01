@@ -1,6 +1,6 @@
-@import "../scss/fontawesome.scss";
-@import "../scss/solid.scss";
-@import "../scss/brands.scss";
+@import '../scss/fontawesome.scss';
+@import '../scss/solid.scss';
+@import '../scss/brands.scss';
 
 @font-face {
   font-family: quicksand-bold;
@@ -28,6 +28,7 @@ $color-text: #1F2041;
 $color-pink: #BC9CFF;
 $color-blue: #8BA4F9;
 $white-color: #FFFFFF;
+$violet-color: #BC9CFF;
 
 %h1 {
   font-family: quicksand-bold;
@@ -54,7 +55,7 @@ $white-color: #FFFFFF;
 }
 
 %shadow {
-  box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
 }
 
 %link{

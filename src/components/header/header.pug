@@ -5,11 +5,11 @@ header(class="header")
     div(class="header__navbar")
       include ../navbar/navbar.pug
     include ../light-button/light-button.pug
-    div(class="header__buttons")
+    form(class="header__buttons")
       div(class="header__button")
         +light-button("Войти")
       include ../color-button/color-button.pug
       div(class="header__button")
         +color-button("Зарегистрироваться")
-    div(class="header__user") 
+    div(class="header__user header__user_hidden") 
       include ../user/user.pug

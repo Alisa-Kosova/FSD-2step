@@ -1,0 +1,19 @@
+mixin createBlockDescription(type, state)
+ div(class="block-inputs__description")
+    div(class="block-inputs__type") #{type}
+    div(class="block-inputs__state") #{state}
+
+div(class="block-inputs")
+  +createBlockDescription('Text Field', 'Default')
+  div(class="block-inputs__input")
+    include ../input/input.pug
+    +createInput(email, "Email", false)
+div(class="block-inputs")
+  +createBlockDescription('Text Field', 'Hover / Focus')
+  div(class="block-inputs__input block-inputs__input_active")
+    include ../input/input.pug
+    +createInput(text, "", false)
+
+div(class="block-dropdown")
+  include ../dropdown/dropdown.pug
+  +createDropdown(["взрослые", 'дети', "младенцы"], "dropdown","Сколько гостей", true )

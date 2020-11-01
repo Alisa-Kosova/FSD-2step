@@ -1,0 +1,13 @@
+extends ../../template-pages/teplate-main.pug
+
+block title
+  | UI kit
+
+block content
+  div(class="form-elements")
+    div(class="form-elements__logo")
+      include ../../../components/logo/logo.pug
+    include ../../../components/block-inputs/block-inputs.pug
+
+block scripts
+  script(src="formElements.js")

@@ -1,0 +1,29 @@
+@import '@style/main.scss';
+@import '@components/dropdown/dropdown.scss';
+
+.block-inputs {
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.block-inputs__description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.block-inputs__type {
+  @extend %h3;
+  text-transform: uppercase;
+}
+
+.block-inputs__state {
+  @extend %body;
+  font-size: 12px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.block-dropdown {
+  max-width: 320px;
+}
