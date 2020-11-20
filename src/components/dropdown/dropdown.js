@@ -1,5 +1,5 @@
 const buttonDropdown = document.getElementsByClassName('dropdown__button');
-const checkmark = '<div class="dropdown__checkmark"></div>';
+const checkmark = '<i class="fa fa-chevron-down dropdown__chevron-down" aria-hidden="true"></i>';
 let dropdownData = [];
 
 class dropdownlist {

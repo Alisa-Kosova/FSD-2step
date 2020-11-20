@@ -2,7 +2,7 @@ mixin createDropdown(list, typeList, nameButton, blockButtons)
   div(class="dropdown")
     div(class="dropdown__type") #{typeList}
     button(class="dropdown__button") #{nameButton}
-      div(class="dropdown__checkmark")
+      <i class="fa fa-chevron-down dropdown__chevron-down" aria-hidden="true"></i>
     div(class="dropdown__list dropdown__list_hidden")
       each item in list 
         div(class="dropdown__list-item") 

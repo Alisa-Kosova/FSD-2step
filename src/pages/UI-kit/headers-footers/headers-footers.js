@@ -13,3 +13,5 @@ headUser[1].classList.remove('header__user_hidden');
 
 const elemUser = headUser[1].querySelector('.user__name');
 elemUser.innerHTML = user;
+
+$('pre').html('123');

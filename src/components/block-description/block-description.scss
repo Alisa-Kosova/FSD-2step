@@ -1,0 +1,17 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.description__type {
+  @extend %h3;
+  text-transform: uppercase;
+}
+
+.description__state {
+  @extend %body;
+  font-size: 12px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}

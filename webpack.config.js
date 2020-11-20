@@ -1,5 +1,5 @@
 const path = require('path');
-var webpack = require('webpack');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -22,6 +22,13 @@ const optimization = () => {
           chunks: 'all',
           enforce: true,
         },
+        commons: {
+          // test: /[\\/]jquery|jquery-ui|air-datepicker[\\/]/,
+          test: /[\\/]jquery|air-datepicker[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          enforce: true,
+        }
       },
       chunks: 'all',
     }
@@ -84,8 +91,8 @@ module.exports = {
       ]
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
+      $: "jquery",
+      jQuery: "jquery",
     })
   ].concat(multipleHtmlPlugins),
   optimization: optimization(),

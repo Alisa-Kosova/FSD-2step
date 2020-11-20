@@ -1,0 +1,13 @@
+mixin createDataPicker(dataRange, inline, dateSelectStart = false, dateSelectEnd = false)
+  if inline 
+    if dataRange
+      div(class="datepicker-here" data-range="true")
+    else
+      div(class="datepicker-here")
+  else
+    if dataRange
+      input(type="text" data-range="true" class="datepicker-here input" data-date-format="dd M" placeholder="ДД.ММ.ГГГГ" date-select-start=dateSelectStart, date-select-end=dateSelectEnd)
+      <i class="fa fa-chevron-down datepicker__chevron-down" aria-hidden="true"></i>
+    else 
+      input(type="text" class="datepicker-here input"  data-date-format="dd.mm.yyyy" placeholder="ДД.ММ.ГГГГ" date-select-start=dateSelectStart, date-select-end=dateSelectEnd)
+      <i class="fa fa-chevron-down datepicker__chevron-down" aria-hidden="true"></i>

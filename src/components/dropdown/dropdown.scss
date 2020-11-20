@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .dropdown__button:focus,
@@ -27,13 +28,10 @@
   border: 1px rgba(31, 32, 65, 0.5) solid;
 }
 
-.dropdown__checkmark {
-  width: 8px;
-  height: 8px;
-  border-right: 1px solid rgba(31, 32, 65, 0.75);
-  border-bottom: 1px solid rgba(31, 32, 65, 0.75);
-  transform: rotate(45deg);
-  margin: 0 10px 5px 0;
+.dropdown__chevron-down {
+  position: absolute;
+  right: 15px;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .dropdown__list {
@@ -122,7 +120,7 @@
   display: flex;
   justify-content: space-between;
   @extend %h3;
-  color: $violet-color;
+  color: $color-pink;
   text-transform: uppercase;
   margin: 20px 5px 10px 13px;
 }

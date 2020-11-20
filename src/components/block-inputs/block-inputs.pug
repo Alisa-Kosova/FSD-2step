@@ -1,19 +1,33 @@
-mixin createBlockDescription(type, state)
- div(class="block-inputs__description")
-    div(class="block-inputs__type") #{type}
-    div(class="block-inputs__state") #{state}
-
-div(class="block-inputs")
-  +createBlockDescription('Text Field', 'Default')
-  div(class="block-inputs__input")
+div(class="block-input")
+  include ../block-description/block-description.pug
+  +createBlockDescription("Text Field", "Default")
+  div(class="block-input__input")
     include ../input/input.pug
-    +createInput(email, "Email", false)
-div(class="block-inputs")
-  +createBlockDescription('Text Field', 'Hover / Focus')
-  div(class="block-inputs__input block-inputs__input_active")
+    +createInput(email, "Email")
+div(class="block-input")
+  +createBlockDescription("Text Field", "Hover / Focus")
+  div(class="block-input__input block-input__input_active")
     include ../input/input.pug
-    +createInput(text, "", false)
-
+    +createInput(text, "")
 div(class="block-dropdown")
   include ../dropdown/dropdown.pug
-  +createDropdown(["взрослые", 'дети', "младенцы"], "dropdown","Сколько гостей", true )
+  +createDropdown(["взрослые", "дети", "младенцы"], "dropdown","Сколько гостей", true)
+
+div(class="block-input")
+  +createBlockDescription("masked text field", "", false, true)
+  input(class="input block-input__input-date" type="text" placeholder="ДД.ММ.ГГГГ")
+
+div(class="block-input__date-pickers")
+  div(class="block-input__date-picker")
+    +createBlockDescription("date dropdown", "")
+    include ../date-picker/date-picker.pug
+    +createDataPicker(false, false)
+  div(class="block-input__date-picker")
+    +createBlockDescription("date dropdown", "")
+    include ../date-picker/date-picker.pug
+    +createDataPicker(false, false, new Date(2019, 7, 19))
+
+div(class="block-input__date-pickers-range")
+  +createBlockDescription("date dropdown", "")
+  include ../date-picker/date-picker.pug
+  +createDataPicker(true, false, new Date(2019, 7, 19), new Date(2019, 7, 23))

@@ -1,29 +1,29 @@
 @import '@style/main.scss';
+@import '@components/block-description/block-description.scss';
 @import '@components/dropdown/dropdown.scss';
+@import '@components/date-picker/date-picker.scss';
 
-.block-inputs {
+
+.block-input,
+.block-input__date-pickers {
   max-width: 320px;
   margin-bottom: 20px;
 }
 
-.block-inputs__description {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-.block-inputs__type {
-  @extend %h3;
-  text-transform: uppercase;
-}
-
-.block-inputs__state {
-  @extend %body;
-  font-size: 12px;
-  opacity: 0.5;
-  text-transform: uppercase;
-}
-
 .block-dropdown {
   max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.block-input__date-picker {
+  width: 150px;
+}
+
+.block-input__date-pickers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-input__date-pickers-range {
+  max-width: 267px;
 }

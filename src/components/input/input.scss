@@ -7,6 +7,7 @@
   position: relative;
   color: rgba(31, 32, 65, 0.75);
   @extend %body;
+  padding-left: 12px;
 }
 
 .input:focus,
@@ -18,7 +19,6 @@
 ::-webkit-input-placeholder {
   @extend %body;
   opacity: 0.25; 
-  padding-left: 12px;
 }
 
 .input__arrow-forward {
@@ -26,4 +26,13 @@
   display: inline;
   margin: 10px 0px 0 -33px;
   color: $color-pink;
+}
+
+.input__checkmark{
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid rgba(31, 32, 65, 0.75);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.75);
+  transform: rotate(45deg);
+  margin: 0 10px 5px 0;
 }

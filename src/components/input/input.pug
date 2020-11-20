@@ -1,5 +1,5 @@
-mixin createInput(type, placeholder, arrow)
-  input(class="input" type=type, placeholder=placeholder)
+mixin createInput(type, placeholder, arrow=false)
+  input(class="input", type=type, placeholder=placeholder)
   if arrow 
     div(class="input__arrow-forward")
       span(class="material-icons arrow-forward") arrow_forward

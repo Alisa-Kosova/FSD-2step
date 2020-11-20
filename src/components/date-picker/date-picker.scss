@@ -1,0 +1,214 @@
+.datepickers-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.datepicker-wrapper {
+  position: relative;
+}
+
+.datepicker {
+  opacity: 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  width: 320px;
+  z-index: 1;
+  position: absolute;
+  left: -100000px;
+}
+
+.datepicker-here {
+  cursor: pointer;
+}
+
+.datepicker.active,
+.datepicker-inline .datepicker {
+  opacity: 1;
+  left: auto;
+}
+
+.datepicker.active {
+  position: absolute;
+}
+
+.datepicker-inline {
+  position: relative;
+  opacity: 1;
+}
+
+.datepicker--pointer {
+  position: absolute;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+}
+
+.-top-left- .datepicker--pointer, .-top-center- .datepicker--pointer, .-top-right- .datepicker--pointer {
+  top: calc(100% - 4px);
+ transform: rotate(135deg);
+}
+.-right-top- .datepicker--pointer, .-right-center- .datepicker--pointer, .-right-bottom- .datepicker--pointer {
+  right: calc(100% - 4px);
+  transform: rotate(225deg);
+}
+
+.-bottom-left- .datepicker--pointer, .-bottom-center- .datepicker--pointer, .-bottom-right- .datepicker--pointer {
+  bottom: calc(100% - 4px);
+  transform: rotate(315deg);
+}
+
+.-left-top- .datepicker--pointer, .-left-center- .datepicker--pointer, .-left-bottom- .datepicker--pointer {
+  left: calc(100% - 4px);
+  transform: rotate(45deg);
+}
+
+.-top-left- .datepicker--pointer, .-bottom-left- .datepicker--pointer {
+  left: 10px;
+}
+
+.-top-right- .datepicker--pointer, .-bottom-right- .datepicker--pointer {
+  right: 10px;
+}
+
+.-top-center- .datepicker--pointer, .-bottom-center- .datepicker--pointer {
+  left: calc(50% - 10px / 2);
+}
+
+.-left-top- .datepicker--pointer, .-right-top- .datepicker--pointer {
+  top: 10px;
+}
+
+.-left-bottom- .datepicker--pointer, .-right-bottom- .datepicker--pointer {
+  bottom: 10px; 
+}
+
+.-left-center- .datepicker--pointer, .-right-center- .datepicker--pointer {
+  top: calc(50% - 10px / 2);
+}
+
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 31px 20px;
+  cursor: pointer;
+}
+
+.datepicker--nav-title {
+  @extend %h2-cyrillic;
+  i {
+    font-style: normal;
+  }
+}
+
+.datepicker--days-names {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+  @extend %h3;
+  color: $color-pink; 
+}
+
+.datepicker--day-name {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.datepicker--cells {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 19px;
+  cursor: pointer;
+}
+
+.datepicker--cell {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %body;
+  color: $color-text;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.-other-month- {
+  @extend %body;
+  color: $color-text;
+  font-size: 12px;
+  opacity: 0.25;
+}
+
+.-current- {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 50%;
+}
+
+.-selected- {
+  background: linear-gradient(180deg, $color-pink 0%, $color-blue 100%);
+  border-radius: 50%;
+  
+}
+
+.-current-,
+.-selected- {
+  color: $white-color;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.-in-range- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+}
+
+.-range-from-,
+.-range-to- {
+  position: relative;
+}
+
+.-range-from-:after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, rgba(188, 156, 255, 0.1)50%, transparent 50%);
+}
+
+.-range-to-:after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, rgba(188, 156, 255, 0.1)50%, transparent 50%);
+}
+
+.datepicker--buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.datepicker--button {
+  @extend %h3;
+  text-transform: uppercase;
+  color: $color-pink;
+  border: none;
+  background: $white-color;
+  cursor: pointer;
+}
+
+.datepicker__chevron-down {
+  position: absolute;
+  margin: 15px 0px 0px -25px;
+  color: rgba(31, 32, 65, 0.25);
+  cursor: pointer;
+}
